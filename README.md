@@ -40,47 +40,24 @@
 ### Payment request body schema
 
     {
-      "definitions": {},
-      "$schema": "http://json-schema.org/draft-07/schema#",
-      "$id": "http://example.com/root.json",
+      "$schema": "http://json-schema.org/draft-04/schema#",
       "type": "object",
-      "title": "The Root Schema",
+      "properties": {
+        "sourceAccount": {
+          "type": "string"
+        },
+        "targetAccount": {
+          "type": "string"
+        },
+        "amount": {
+          "type": "number"
+        }
+      },
       "required": [
         "sourceAccount",
         "targetAccount",
         "amount"
-      ],
-      "properties": {
-        "sourceAccount": {
-          "$id": "#/properties/sourceAccount",
-          "type": "string",
-          "title": "The Sourceaccount Schema",
-          "default": "",
-          "examples": [
-            "1111111111"
-          ],
-          "pattern": "^(.*)$"
-        },
-        "targetAccount": {
-          "$id": "#/properties/targetAccount",
-          "type": "string",
-          "title": "The Targetaccount Schema",
-          "default": "",
-          "examples": [
-            "2222222222"
-          ],
-          "pattern": "^(.*)$"
-        },
-        "amount": {
-          "$id": "#/properties/amount",
-          "type": "number",
-          "title": "The Amount Schema",
-          "default": 0.0,
-          "examples": [
-            1.34
-          ]
-        }
-      }
+      ]
     }
 
 Example:
