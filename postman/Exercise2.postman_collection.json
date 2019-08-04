@@ -1,0 +1,71 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Exercise2",
+		"_postman_id": "fd41b936-9fc0-e93e-bdda-da21f09ed531",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "payment request",
+			"request": {
+				"url": "localhost:8000/payment",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"sourceAccount\": \"1111111111\",\n\t\"targetAccount\": \"2222222222\",\n\t\"amount\": 23.45\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "list accounts",
+			"request": {
+				"url": "localhost:8000/account",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"sourceAccount\": \"1111111111\",\n\t\"targetAccount\": \"2222222222\",\n\t\"amount\": 23.45\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "delete account",
+			"request": {
+				"url": "localhost:8000/account/3333333333",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
